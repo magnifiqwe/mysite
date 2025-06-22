@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель администратора</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'admin.css' %}">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">4m1g</div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="{% url 'index' %}">Главная</a></li>
+                        <li><a href="#" class="active">Админ-панель</a></li>
+                        <!-- <li><a href="{% url 'teacher' %}">Преподаватели</a></li>  -->
+                        <li><a href="{% url 'classroom_view' %}">Просмотр аудитории</a></li>
+                        <li><a href="{% url 'logout' %}">Выйти</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <div class="container">
+            <h1 class="admin-title">Панель администратора</h1>
+
+            <div class="admin-grid">
+                <section class="admin-card">
+                    <h2><i class="fas fa-video"></i> Просмотр аудитории</h2>
+                    <div class="card-content">
+                        <p>Доступ к видеопотоку и данные о количестве студентов в аудитории</p>
+                        <a href="{% url 'classroom_view' %}" class="btn btn-admin">Перейти</a>
+                    </div>
+                </section>
+
+                <section class="admin-card">
+                    <h2><i class="fas fa-door-open"></i> Управление аудиториями</h2>
+                    <div class="card-content">
+                        <p>Настройка аудиторий и их расписания</p>
+                        <a href="{% url 'admin_panel' %}" class="btn btn-admin">Перейти</a>
+                    </div>
+                </section>
+
+                <section class="admin-card">
+                    <h2><i class="fas fa-users"></i> Управление пользователями</h2>
+                    <div class="card-content">
+                        <p>Добавление, редактирование и удаление пользователей системы</p>
+                        <a href="{% url 'admin:index' %}" class="btn btn-admin">Перейти</a>
+                    </div>
+                </section>
+
+                <section class="admin-card">
+                    <h2><i class="fas fa-chart-bar"></i> Статистика</h2>
+                    <div class="card-content">
+                        <p>Просмотр статистики посещаемости и успеваемости</p>
+                        <a href="#" class="btn btn-admin">Перейти</a>
+                    </div>
+                </section>
+
+                <section class="admin-card">
+                    <h2><i class="fas fa-cog"></i> Настройки системы</h2>
+                    <div class="card-content">
+                        <p>Конфигурация параметров системы</p>
+                        <a href="#" class="btn btn-admin">Перейти</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="copyright">
+                <p>&copy; 2025 Учебный портал. Административная панель.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

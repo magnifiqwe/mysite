@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель преподавателя</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'teacher.css' %}">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">4m1g</div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="{% url 'index' %}">Главная</a></li>
+                        <li><a href="#" class="active">Мои курсы</a></li>
+                        <li><a href="#">Журнал</a></li>
+                        <li><a href="{% url 'classroom_view' %}">Просмотр аудитории</a></li>
+                        <li><a href="{% url 'logout' %}">Выйти</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <div class="container">
+            <h1 class="teacher-title">Панель преподавателя</h1>
+
+            <div class="teacher-grid">
+                <section class="teacher-card">
+                    <h2><i class="fas fa-book"></i> Мои дисциплины</h2>
+                    <div class="card-content">
+                        <ul class="course-list">
+                            <li>Математический анализ</li>
+                            <li>Теория алгоритмов</li>
+                            <li>Базы данных</li>
+                        </ul>
+                        <a href="#" class="btn btn-teacher">Все дисциплины</a>
+                    </div>
+                </section>
+
+                <section class="teacher-card">
+                    <h2><i class="fas fa-calendar-alt"></i> Расписание</h2>
+                    <div class="card-content">
+                        <div class="schedule-item">
+                            <p>Понедельник, 10:00 - Мат. анализ (ауд. 305)</p>
+                        </div>
+                        <a href="#" class="btn btn-teacher">Полное расписание</a>
+                    </div>
+                </section>
+
+                <section class="teacher-card">
+                    <h2><i class="fas fa-video"></i> Просмотр аудитории</h2>
+                        <div class="card-content">
+                            <p>Трансляция изображения с камеры и подсчёт студентов в реальном времени.</p>
+                        <a href="{% url 'classroom_view' %}" class="btn btn-teacher">Перейти</a>
+                        </div>
+                </section>
+
+                <section class="teacher-card">
+                    <h2><i class="fas fa-user-graduate"></i> Студенты</h2>
+                    <div class="card-content">
+                        <p>Просмотр списка студентов и их успеваемости</p>
+                        <a href="#" class="btn btn-teacher">Перейти</a>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="copyright">
+                <p>&copy; 2025 Учебный портал. Преподавательская панель.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

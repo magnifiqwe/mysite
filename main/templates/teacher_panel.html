@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Панель преподавателя</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Мои курсы</a></li>
+                <li><a href="#">Журнал</a></li>
+                <li><a href="/logout/">Выйти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Панель преподавателя</h2>
+        <h3>Мои предметы:</h3>
+        <ul>
+        {% for subject in subjects %}
+            <li>{{ subject.name }}</li>
+        {% endfor %}
+        </ul>
+
+        <h3>Список студентов:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>ФИО студента</th>
+                    <th>Группа</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for student in students %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.group }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <div class="links">
+            <h3>Быстрые ссылки</h3>
+            <ul>
+                <li><a href="#">Расписание</a></li>
+                <li><a href="#">Преподаватели</a></li>
+            </ul>
+        </div>
+        <div class="contacts">
+            <h3>Контакты</h3>
+            <p>+7 (123) 456-7890</p>
+            <p>info@university.edu</p>
+        </div>
+    </footer>
+</body>
+</html>

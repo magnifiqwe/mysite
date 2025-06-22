@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебный портал</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">4m1g</div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="{% url 'dashboard' %}">Администратор</a></li>
+                        <li><a href="{% url 'teacher_check' %}">Преподаватель</a></li>
+                        <li><a href="#">Студенты</a></li>
+                        <li><a href="#">Аудитории</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Добро пожаловать на учебный портал</h1>
+            <h3>Следите за студентами онлайн</h3>
+            <a href="{% url 'classroom_view' %}" class="btn">Найти аудиторию</a>
+        </div>
+    </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="{% static 'images/AI.jpg' %}"  alt="О нас">
+                </div>
+                <div class="about-text">
+                    <h2>О нашей системе</h2>
+                    <p>Инновационная платформа для управления учебным процессом в образовательных учреждениях.</p>
+                    <p>Мы предлагаем удобные инструменты для мониторинга посещаемости и успеваемости студентов.</p>
+                    <p>Наша система помогает оптимизировать учебный процесс и улучшить взаимодействие между преподавателями и студентами.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +7 (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@university.edu</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="#">Расписание</a></li>
+                        <li><a href="#">Преподаватели</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Соцсети</h3>
+                    <div class="social-icons">
+                        <a href="https://vk.com/ural.federal.university"><i class="fab fa-vk"></i></a>
+                        <a href="https://t.me/urfu_ru"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Учебный портал. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

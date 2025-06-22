@@ -1,0 +1,58 @@
+.admin-main {
+    padding: 40px 0;
+    flex: 1;
+}
+
+.admin-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.admin-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.admin-card:hover {
+    transform: translateY(-5px);
+}
+
+.admin-card h2 {
+    background: #3498db;
+    color: white;
+    padding: 15px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.btn-admin {
+    background: #3498db;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-admin:hover {
+    background: #2980b9;
+}

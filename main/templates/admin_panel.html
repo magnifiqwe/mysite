@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Панель администратора</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Админ-панель</a></li>
+                <li><a href="#">Переподаватели</a></li>
+                <li><a href="/logout/">Выйти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Панель администратора</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Управление пользователями</h3>
+                <p>Добавление, редактирование и удаление пользователей системы</p>
+                <button>Перейти</button>
+            </div>
+            <div class="card">
+                <h3>Управление аудиториями</h3>
+                <p>Настройка аудиторий и доступа к камерам</p>
+                <button>Перейти</button>
+            </div>
+            <div class="card">
+                <h3>Статистика</h3>
+                <p>Просмотр статистики посещаемости и успеваемости</p>
+                <button>Перейти</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="links">
+            <h3>Быстрые ссылки</h3>
+            <ul>
+                <li><a href="#">Расписание</a></li>
+                <li><a href="#">Преподаватели</a></li>
+            </ul>
+        </div>
+        <div class="contacts">
+            <h3>Контакты</h3>
+            <p>+7 (123) 456-7890</p>
+            <p>info@university.edu</p>
+        </div>
+    </footer>
+</body>
+</html>

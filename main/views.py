@@ -236,7 +236,7 @@ def analyze_image_view(request):
 
 def analyze_with_yolov8(image_path):
     try:
-        model = YOLO(os.path.join(settings.BASE_DIR, 'best1.pt'))
+        model = YOLO(os.path.join(settings.BASE_DIR, 'best (7).pt'))
 
         # Чтение изображения
         img = cv2.imread(image_path)
@@ -244,7 +244,8 @@ def analyze_with_yolov8(image_path):
             raise ValueError("Не удалось прочитать изображение")
 
         # Детекция объектов
-        results = model(img, conf=0.5)  # Порог уверенности 50%
+        #results = model(img, conf=0.5)  # Порог уверенности 50%
+        results = model(img, conf=0.25)
 
         # Фильтрация только людей (класс 0)
         person_count = 0

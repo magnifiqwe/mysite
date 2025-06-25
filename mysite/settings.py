@@ -102,9 +102,6 @@ LOGIN_URL = '/admin/login/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# Путь к модели YOLO
-YOLO_MODEL_PATH = os.path.join(BASE_DIR, 'best1.pt')
-
 # Разрешенные форматы изображений
 ALLOWED_IMAGE_EXTENSIONS = ['jpg', 'jpeg', 'png', 'bmp']
 

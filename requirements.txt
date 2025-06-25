@@ -1,0 +1,4 @@
+ultralytics==8.3.150
+django==4.2.6
+opencv-python==4.8.1.78
+numpy==1.26.2
